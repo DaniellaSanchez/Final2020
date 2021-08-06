@@ -57,3 +57,14 @@ The barchart is showing that 337 people were infected with covid19 and almost 58
 
 In the first plot on the left, the numbers going up the left side represent the y-axis or the number of people who got covid. The bottom represents the x-axis or whether people got covid or not. As opposed to the second plot which shows the percentage on the y-xis instead. One shows the number of each group who got covid and who didn't with both the vaccine and the placebo and the other shows the same information but in percentage.
 
+
+### Numerical Results
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=guy)
+rowPerc(table1)
+colPerc(table1)
+```
+
+The numerical results show that among the guys 58% got covid after taking then vaccine, while about 42% of the guys who took placebo got covid. This shows the vaccine is not effective in preventing covid in males and is not recommended. The guys who took the placebo were less likely to get covid. The guys who gto the vaccine odds of getting covid are 3:2, thats one and a half times more likely than those who took the placebo. 
+
